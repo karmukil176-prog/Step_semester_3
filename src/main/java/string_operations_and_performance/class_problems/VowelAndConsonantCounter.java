@@ -1,4 +1,4 @@
-package string_operations_and_performance.practice_problems;
+package string_operations_and_performance.class_problems;
 
 import java.util.*;
 
