@@ -1,4 +1,4 @@
-package string_operations_and_perfomance.class_problems;
+package string_operations_and_perfomance.practice_problems;
 
 import java.util.*;
 
@@ -12,6 +12,7 @@ public class VowelAndConsonantCounter {
         }
         System.out.printf("Vowels: %d | Consonants: %d%n", v, c);
     }
+
     public static void main(String[] args) {
         countVowelsAndConsonants("Java Programming");
     }
