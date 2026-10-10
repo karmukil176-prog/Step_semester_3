@@ -1,9 +1,9 @@
-package oop_introduction_classes_and_objects.assignment;
+package oop_introduction_classes_and_objects.class_problems;
 
 import java.util.*;
 
-public class DuplicatePlayerPickChecker {
-    public static String findDuplicatePick(String[] names) {
+public class DuplicateTeamNameFinder {
+    public static String findDuplicateName(String[] names) {
         for (int i = 0; i < names.length; i++)
             for (int j = i + 1; j < names.length; j++)
                 if (names[i].equals(names[j])) return "Duplicate Found: " + names[i];
@@ -11,6 +11,7 @@ public class DuplicatePlayerPickChecker {
     }
 
     public static void main(String[] args) {
-        System.out.println(findDuplicatePick(new String[] {"Kohli", "Bumrah", "Kohli"}));
+        System.out.println(
+                findDuplicateName(new String[] {"ByteForce", "CodeCrafters", "ByteForce"}));
     }
 }

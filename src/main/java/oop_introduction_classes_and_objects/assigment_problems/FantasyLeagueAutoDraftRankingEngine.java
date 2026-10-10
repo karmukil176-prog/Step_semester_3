@@ -1,4 +1,4 @@
-package oop_introduction_classes_and_objects.assignment;
+package oop_introduction_classes_and_objects.assigment_problems;
 
 import java.util.*;
 
