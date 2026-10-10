@@ -1,4 +1,4 @@
-package string.assignment;
+package java_string_concepts.assignment;
 
 
 public class TypingSpeedTestAccuracyChecker {

@@ -1,4 +1,4 @@
-package string.practice_problems;
+package java_string_concepts.practice_problems;
 
 import java.util.*;
 
