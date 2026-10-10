@@ -1,14 +1,16 @@
-package classses_and_objects.class_problems;
+package classses_and_objects.practice_problems;
 
 public class LibraryIdCardManagement {
     public static class IdCard {
         String name;
         int booksIssued;
+
         public IdCard(String n, int c) {
             name = n;
             booksIssued = c;
         }
     }
+
     public static void main(String[] x) {
         IdCard ravi = new IdCard("Ravi", 0), duplicate = ravi;
         duplicate.booksIssued = 3;
