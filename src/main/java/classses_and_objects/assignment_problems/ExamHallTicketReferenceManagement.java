@@ -1,0 +1,20 @@
+package classses_and_objects.assignment_problems;
+
+public class ExamHallTicketReferenceManagement {
+    public static class HallTicket {
+        String studentName;
+        int seatNumber;
+        public HallTicket(String n, int s) {
+            studentName = n;
+            seatNumber = s;
+        }
+    }
+    public static void main(String[] args) {
+        HallTicket priya = new HallTicket("Priya", 0), copy = priya;
+        copy.seatNumber = 45;
+        HallTicket separate = new HallTicket("Priya", 45);
+        System.out.println("Priya's seatNumber (via first variable): " + priya.seatNumber);
+        System.out.println("copy == priya: " + (copy == priya));
+        System.out.println("separate == priya: " + (separate == priya));
+    }
+}
