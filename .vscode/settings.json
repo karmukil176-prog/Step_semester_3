@@ -1,0 +1,7 @@
+{
+  "code-runner.ignoreSelection": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "java": "cd $workspaceRoot && package_name=$(sed -n 's/^package \\([A-Za-z0-9_.]*\\);/\\1/p' $file) && javac -d /tmp/step_semester_3_classes $file && java -cp /tmp/step_semester_3_classes $package_name.$fileNameWithoutExt"
+  }
+}
