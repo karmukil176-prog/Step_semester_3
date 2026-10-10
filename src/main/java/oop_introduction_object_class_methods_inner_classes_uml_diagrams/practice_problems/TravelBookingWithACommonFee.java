@@ -1,4 +1,4 @@
-package abstraction.practice_problems;
+package oop_introduction_object_class_methods_inner_classes_uml_diagrams.practice_problems;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package abstraction.assignment;
+package oop_introduction_object_class_methods_inner_classes_uml_diagrams.assignment;
 
 import java.util.Scanner;
 
