@@ -1,4 +1,4 @@
-package string_operations_and_perfomance.assignment;
+package oop_introduction_classes_and_objects.assignment;
 
 import java.util.*;
 
