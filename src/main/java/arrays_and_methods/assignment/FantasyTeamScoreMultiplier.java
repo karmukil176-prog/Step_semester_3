@@ -1,4 +1,4 @@
-package arrays_and_methods.assignment_problems;
+package arrays_and_methods.assignment;
 
 import java.util.*;
 
@@ -8,10 +8,9 @@ public class FantasyTeamScoreMultiplier {
         scores[captain] *= 2;
         scores[vice] *= 1.5;
     }
+
     public static void main(String[] args) {
-        double[] a = {
-            40, 55, 30, 62
-        };
+        double[] a = {40, 55, 30, 62};
         applyMultipliers(a, 1, 3);
         System.out.println(Arrays.toString(a));
     }

@@ -1,4 +1,4 @@
-package arrays_and_methods.assignment_problems;
+package arrays_and_methods.assignment;
 
 import java.util.*;
 
@@ -12,9 +12,8 @@ public class TopPerformerTracker {
         }
         return "Min: " + min + " | Max: " + max + " | Spread: " + (max - min);
     }
+
     public static void main(String[] args) {
-        System.out.println(findMinMaxSpread(new int[] {
-            45, 82, 79, 90, 33, 90, 61
-        }));
+        System.out.println(findMinMaxSpread(new int[] {45, 82, 79, 90, 33, 90, 61}));
     }
 }
