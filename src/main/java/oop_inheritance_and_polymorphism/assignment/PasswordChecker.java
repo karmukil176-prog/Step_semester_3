@@ -1,4 +1,4 @@
-package encapsulation.assignment;
+package oop_inheritance_and_polymorphism.assignment;
 
 public class PasswordChecker {
     private final String password;

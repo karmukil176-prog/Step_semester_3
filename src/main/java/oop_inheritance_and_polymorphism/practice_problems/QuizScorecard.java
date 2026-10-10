@@ -1,4 +1,4 @@
-package encapsulation.practice_problems;
+package oop_inheritance_and_polymorphism.practice_problems;
 
 public class QuizScorecard {
     public static class Scorecard {

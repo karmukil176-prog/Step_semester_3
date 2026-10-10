@@ -1,4 +1,4 @@
-package encapsulation.assignment;
+package oop_inheritance_and_polymorphism.assignment;
 
 import java.util.Arrays;
 
