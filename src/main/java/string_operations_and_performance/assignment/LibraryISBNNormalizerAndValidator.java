@@ -1,4 +1,4 @@
-package string_operations_and_perfomance.assignment;
+package string_operations_and_performance.assignment;
 
 import java.util.*;
 
