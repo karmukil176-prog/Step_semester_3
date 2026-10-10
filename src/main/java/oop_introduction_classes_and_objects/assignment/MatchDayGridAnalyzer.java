@@ -1,4 +1,4 @@
-package arrays_and_methods.assignment;
+package oop_introduction_classes_and_objects.assignment;
 
 import java.util.*;
 
