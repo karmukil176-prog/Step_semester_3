@@ -1,4 +1,4 @@
-package programming_fundamental.practice_problems;
+package programming_fundamental.class_problems;
 
 import java.util.*;
 
