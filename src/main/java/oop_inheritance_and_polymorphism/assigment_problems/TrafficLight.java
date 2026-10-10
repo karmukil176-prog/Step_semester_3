@@ -1,4 +1,4 @@
-package oop_inheritance_and_polymorphism.assignment;
+package oop_inheritance_and_polymorphism.assigment_problems;
 
 public class TrafficLight {
     private static final String[] C = {"RED", "GREEN", "YELLOW"};
