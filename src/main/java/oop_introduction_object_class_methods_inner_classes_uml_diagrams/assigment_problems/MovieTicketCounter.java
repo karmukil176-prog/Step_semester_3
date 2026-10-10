@@ -1,4 +1,4 @@
-package oop_introduction_object_class_methods_inner_classes_uml_diagrams.assignment;
+package oop_introduction_object_class_methods_inner_classes_uml_diagrams.assigment_problems;
 
 import java.util.Scanner;
 
