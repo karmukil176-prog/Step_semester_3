@@ -1,86 +1,27 @@
-import java.util.*;
+package string.class_problems;
 
 public class PalindromeChecker {
-
-    // 1. Iterative approach
-    static boolean isPalindromeIterative(String text) {
-
-        int left = 0;
-        int right = text.length() - 1;
-
-        while (left < right) {
-
-            if (text.charAt(left) != text.charAt(right)) {
-                return false;
-            }
-
-            left++;
-            right--;
-        }
-
+    public static boolean isPalindromeIterative(String s) {
+        for (int l = 0, r = s.length() - 1; l < r; l++, r--) if (s.charAt(l) != s.charAt(r)) return false;
         return true;
     }
-
-    // 2. Recursive approach
-    static boolean isPalindromeRecursive(String text) {
-
-        return recursiveCheck(text, 0, text.length() - 1);
+    public static boolean isPalindromeRecursive(String s) {
+        return check(s, 0, s.length() - 1);
     }
-
-    static boolean recursiveCheck(String text, int left, int right) {
-
-        if (left >= right) {
-            return true;
-        }
-
-        if (text.charAt(left) != text.charAt(right)) {
-            return false;
-        }
-
-        return recursiveCheck(text, left + 1, right - 1);
+    private static boolean check(String s, int l, int r) {
+        return l >= r || (s.charAt(l) == s.charAt(r) && check(s, l + 1, r - 1));
     }
-
-    // 3. Array reversal approach
-    static boolean isPalindromeArrayReversal(String text) {
-
-        char[] arr = text.toCharArray();
-
-        int left = 0;
-        int right = arr.length - 1;
-
-        while (left < right) {
-
-            char temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-
-            left++;
-            right--;
+    public static boolean isPalindromeArrayReversal(String s) {
+        char[] a = s.toCharArray();
+        for (int l = 0, r = a.length - 1; l < r; l++, r--) {
+            char c = a[l];
+            a[l] = a[r];
+            a[r] = c;
         }
-
-        String reversed = new String(arr);
-
-        return text.equals(reversed);
+        return s.equals(new String(a));
     }
-
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter a string: ");
-        String text = sc.nextLine();
-
-        System.out.println();
-
-        System.out.println("Iterative: " +
-                (isPalindromeIterative(text) ? "Palindrome" : "Not Palindrome"));
-
-        System.out.println("Recursive: " +
-                (isPalindromeRecursive(text) ? "Palindrome" : "Not Palindrome"));
-
-        System.out.println("Array Reversal: " +
-                (isPalindromeArrayReversal(text) ? "Palindrome" : "Not Palindrome"));
-
-        sc.close();
+    public static void main(String[] x) {
+        String s = x.length == 0 ? "madam" : x[0];
+        System.out.println("Iterative: " + isPalindromeIterative(s) + " | Recursive: " + isPalindromeRecursive(s) + " | Array Reversal: " + isPalindromeArrayReversal(s));
     }
 }

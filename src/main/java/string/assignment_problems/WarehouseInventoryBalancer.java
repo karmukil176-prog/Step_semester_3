@@ -1,77 +1,34 @@
-import java.util.Scanner;
+package string.assignment_problems;
+
+import java.util.Arrays;
 
 public class WarehouseInventoryBalancer {
-
-    static void analyzeInventory(int[] sectionA, int[] sectionB) {
-
-        int totalA = 0;
-        int totalB = 0;
-
-        for (int i = 0; i < sectionA.length; i++) {
-            totalA += sectionA[i];
-            totalB += sectionB[i];
-        }
-
-        String status;
-
-        if (totalA == totalB) {
-            status = "Balanced";
-        } else {
-            status = "Not Balanced";
-        }
-
-        int highest = sectionA[0];
-        String highestSection = "Section A";
-        int highestIndex = 0;
-
-        for (int i = 0; i < sectionA.length; i++) {
-
-            if (sectionA[i] > highest) {
-                highest = sectionA[i];
-                highestSection = "Section A";
-                highestIndex = i;
+    public static void analyzeInventory(int[] a, int[] b) {
+        if (a.length != b.length || a.length == 0) throw new IllegalArgumentException("Arrays must have equal nonzero length");
+        long sa = 0, sb = 0;
+        for (int x : a) sa += x;
+        for (int x : b) sb += x;
+        int max = a[0], idx = 0;
+        char section = 'A';
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] > max) {
+                max = a[i];
+                idx = i;
+                section = 'A';
             }
-
-            if (sectionB[i] > highest) {
-                highest = sectionB[i];
-                highestSection = "Section B";
-                highestIndex = i;
+            if (b[i] > max) {
+                max = b[i];
+                idx = i;
+                section = 'B';
             }
         }
-
-        System.out.println("Section A Total: " + totalA);
-        System.out.println("Section B Total: " + totalB);
-        System.out.println("Status: " + status);
-
-        System.out.println("Highest Quantity: " + highest
-                + " (" + highestSection
-                + ", Item " + (highestIndex + 1) + ")");
+        System.out.printf("Section A Total: %d | Section B Total: %d | Status: %s | Highest Quantity: %d (Section %c, Item %d)%n", sa, sb, sa == sb ? "Balanced" : "Not Balanced", max, section, idx + 1);
     }
-
     public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter number of items: ");
-        int n = sc.nextInt();
-
-        int[] sectionA = new int[n];
-        int[] sectionB = new int[n];
-
-        System.out.println("Enter quantities for Section A:");
-
-        for (int i = 0; i < n; i++) {
-            sectionA[i] = sc.nextInt();
-        }
-
-        System.out.println("Enter quantities for Section B:");
-
-        for (int i = 0; i < n; i++) {
-            sectionB[i] = sc.nextInt();
-        }
-
-        analyzeInventory(sectionA, sectionB);
-
-        sc.close();
+        analyzeInventory(new int[] {
+            20, 15, 30
+        }, new int[] {
+            25, 10, 30
+        });
     }
 }

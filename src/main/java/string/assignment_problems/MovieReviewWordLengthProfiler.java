@@ -1,47 +1,20 @@
-import java.util.Scanner;
+package string.assignment_problems;
+
+import java.util.Arrays;
 
 public class MovieReviewWordLengthProfiler {
-
-    static void classifyWordLengths(String review) {
-
-        String[] words = review.split("\\s+");
-
-        int shortWords = 0;
-        int mediumWords = 0;
-        int longWords = 0;
-
-        for (int i = 0; i < words.length; i++) {
-
-            int length = words[i].length();
-
-            if (length >= 1 && length <= 4) {
-
-                shortWords++;
-
-            } else if (length >= 5 && length <= 8) {
-
-                mediumWords++;
-
-            } else {
-
-                longWords++;
-            }
+    public static void classifyWordLengths(String review) {
+        int shortN = 0, medium = 0, longN = 0;
+        for (String word : review.trim().split("\\s+")) {
+            if (word.isEmpty()) continue;
+            int n = word.replaceAll("[^\\p{L}]", "").length();
+            if (n <= 4) shortN++;
+            else if (n <= 8) medium++;
+            else longN++;
         }
-
-        System.out.println("Short: " + shortWords);
-        System.out.println("Medium: " + mediumWords);
-        System.out.println("Long: " + longWords);
+        System.out.printf("Short: %d | Medium: %d | Long: %d%n", shortN, medium, longN);
     }
-
     public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter movie review: ");
-        String review = sc.nextLine();
-
-        classifyWordLengths(review);
-
-        sc.close();
+        classifyWordLengths("This movie was absolutely fantastic and thrilling");
     }
 }
