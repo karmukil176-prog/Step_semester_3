@@ -1,4 +1,4 @@
-package access_modifiers_encapsulation_object_modeling.practice_problems;
+package access_modifiers_encapsulation_object_modeling.class_problems;
 
 public class CourseCreditManagement {
     public static class Course {

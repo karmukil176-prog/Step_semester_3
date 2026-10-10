@@ -1,4 +1,4 @@
-package access_modifiers_encapsulation_object_modeling.assignment;
+package access_modifiers_encapsulation_object_modeling.assigment_problems;
 
 public class PayrollSalaryManagement {
     public static class PayrollAccount {
