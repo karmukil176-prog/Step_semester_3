@@ -1,4 +1,4 @@
-package arrays.practice_problems;
+package programming_fundamental.practice_problems;
 
 import java.util.*;
 

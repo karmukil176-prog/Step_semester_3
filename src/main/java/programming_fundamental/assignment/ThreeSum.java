@@ -1,4 +1,4 @@
-package arrays.assignment;
+package programming_fundamental.assignment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
