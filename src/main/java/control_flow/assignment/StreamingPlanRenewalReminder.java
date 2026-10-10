@@ -1,4 +1,4 @@
-package control_flow.assignment_problems;
+package control_flow.assignment;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -6,23 +6,28 @@ import java.util.*;
 public class StreamingPlanRenewalReminder {
     private interface Plan {
         String name();
+
         LocalDate renewal();
     }
+
     private record BasicPlan(String name, LocalDate start) implements Plan {
         public LocalDate renewal() {
             return start.plusDays(30);
         }
     }
+
     private record StandardPlan(String name, LocalDate start) implements Plan {
         public LocalDate renewal() {
             return start.plusDays(90);
         }
     }
+
     private record PremiumPlan(String name, LocalDate start) implements Plan {
         public LocalDate renewal() {
             return start.plusDays(365);
         }
     }
+
     private static Plan create(String type, String name, LocalDate start) {
         return switch (type) {
             case "BASIC" -> new BasicPlan(name, start);
@@ -31,6 +36,7 @@ public class StreamingPlanRenewalReminder {
             default -> throw new IllegalArgumentException("Unknown plan");
         };
     }
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine().trim());

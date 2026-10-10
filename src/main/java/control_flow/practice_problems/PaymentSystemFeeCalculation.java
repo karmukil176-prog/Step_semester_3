@@ -1,4 +1,4 @@
-package control_flow.class_problems;
+package control_flow.practice_problems;
 
 import java.util.*;
 
@@ -6,21 +6,25 @@ public class PaymentSystemFeeCalculation {
     private interface Payment {
         double adjusted();
     }
+
     private record Card(double amount) implements Payment {
         public double adjusted() {
             return amount * 1.02;
         }
     }
+
     private record Wallet(double amount) implements Payment {
         public double adjusted() {
             return amount * 1.01;
         }
     }
+
     private record BankTransfer(double amount) implements Payment {
         public double adjusted() {
             return amount;
         }
     }
+
     private static Payment create(String t, double a) {
         return switch (t) {
             case "CARD" -> new Card(a);
@@ -29,6 +33,7 @@ public class PaymentSystemFeeCalculation {
             default -> throw new IllegalArgumentException("Unknown payment type");
         };
     }
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine().trim());

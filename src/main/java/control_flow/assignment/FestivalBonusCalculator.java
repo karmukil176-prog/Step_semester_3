@@ -1,27 +1,32 @@
-package control_flow.assignment_problems;
+package control_flow.assignment;
 
 import java.util.*;
 
 public class FestivalBonusCalculator {
     private interface Bonus {
         double amount();
+
         String name();
     }
+
     private record FullTimeEmployee(String name, double salary) implements Bonus {
         public double amount() {
             return salary * .10;
         }
     }
+
     private record PartTimeEmployee(String name, double salary) implements Bonus {
         public double amount() {
             return salary * .05;
         }
     }
+
     private record InternEmployee(String name, double salary) implements Bonus {
         public double amount() {
             return 2000;
         }
     }
+
     private static Bonus create(String type, String name, double salary) {
         return switch (type) {
             case "FULLTIME" -> new FullTimeEmployee(name, salary);
@@ -30,6 +35,7 @@ public class FestivalBonusCalculator {
             default -> throw new IllegalArgumentException("Unknown employee type");
         };
     }
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine().trim());

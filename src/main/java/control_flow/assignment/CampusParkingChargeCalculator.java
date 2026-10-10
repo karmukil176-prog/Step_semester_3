@@ -1,4 +1,4 @@
-package control_flow.assignment_problems;
+package control_flow.assignment;
 
 import java.util.*;
 
@@ -6,21 +6,25 @@ public class CampusParkingChargeCalculator {
     private interface ParkingCharge {
         double amount();
     }
+
     private record Bike(int hours) implements ParkingCharge {
         public double amount() {
             return 10.0 * hours;
         }
     }
+
     private record Car(int hours) implements ParkingCharge {
         public double amount() {
             return 30.0 + 20.0 * (hours - 1);
         }
     }
+
     private record Truck(int hours) implements ParkingCharge {
         public double amount() {
             return Math.max(100.0, 50.0 * hours);
         }
     }
+
     private static ParkingCharge create(String type, int hours) {
         return switch (type) {
             case "BIKE" -> new Bike(hours);
@@ -29,6 +33,7 @@ public class CampusParkingChargeCalculator {
             default -> throw new IllegalArgumentException("Unknown vehicle type");
         };
     }
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine().trim());

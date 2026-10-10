@@ -1,4 +1,4 @@
-package control_flow.assignment_problems;
+package control_flow.assignment;
 
 import java.util.*;
 
@@ -6,21 +6,25 @@ public class CanteenBillingCounter {
     private interface Bill {
         double amount();
     }
+
     private record StudentBill(double base) implements Bill {
         public double amount() {
             return base * .90;
         }
     }
+
     private record StaffBill(double base) implements Bill {
         public double amount() {
             return base * .95;
         }
     }
+
     private record GuestBill(double base) implements Bill {
         public double amount() {
             return base + 10;
         }
     }
+
     private static Bill create(String type, double amount) {
         return switch (type) {
             case "STUDENT" -> new StudentBill(amount);
@@ -29,6 +33,7 @@ public class CanteenBillingCounter {
             default -> throw new IllegalArgumentException("Unknown customer type");
         };
     }
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = Integer.parseInt(s.nextLine().trim());
