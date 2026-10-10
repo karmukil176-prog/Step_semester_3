@@ -1,4 +1,4 @@
-package arrays.class_problems;
+package arrays.practice_problems;
 
 import java.util.*;
 
@@ -12,9 +12,8 @@ public class BestTimeToBuyAndSellStock {
         }
         return best;
     }
+
     public static void main(String[] args) {
-        System.out.println(maxProfit(new int[] {
-            7, 1, 5, 3, 6, 4
-        }));
+        System.out.println(maxProfit(new int[] {7, 1, 5, 3, 6, 4}));
     }
 }

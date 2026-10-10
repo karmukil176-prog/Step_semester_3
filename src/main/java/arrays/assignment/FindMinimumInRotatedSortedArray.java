@@ -1,4 +1,4 @@
-package arrays.assignment_problems;
+package arrays.assignment;
 
 import java.util.*;
 
@@ -13,9 +13,8 @@ public class FindMinimumInRotatedSortedArray {
         }
         return nums[l];
     }
+
     public static void main(String[] args) {
-        System.out.println(findMin(new int[] {
-            3, 4, 5, 1, 2
-        }));
+        System.out.println(findMin(new int[] {3, 4, 5, 1, 2}));
     }
 }

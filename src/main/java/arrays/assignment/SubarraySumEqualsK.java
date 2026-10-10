@@ -1,10 +1,10 @@
-package arrays.assignment_problems;
+package arrays.assignment;
 
 import java.util.*;
 
 public class SubarraySumEqualsK {
     public static int subarraySum(int[] nums, int k) {
-        Map<Long, Integer>seen = new HashMap<>();
+        Map<Long, Integer> seen = new HashMap<>();
         seen.put(0L, 1);
         long sum = 0;
         int answer = 0;
@@ -15,9 +15,8 @@ public class SubarraySumEqualsK {
         }
         return answer;
     }
+
     public static void main(String[] args) {
-        System.out.println(subarraySum(new int[] {
-            1, 1, 1
-        }, 2));
+        System.out.println(subarraySum(new int[] {1, 1, 1}, 2));
     }
 }

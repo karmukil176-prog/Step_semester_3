@@ -1,4 +1,4 @@
-package arrays.class_problems;
+package arrays.practice_problems;
 
 import java.util.*;
 
@@ -11,11 +11,9 @@ public class MergeTwoSortedArrays {
         while (j < b.length) out[k++] = b[j++];
         return out;
     }
+
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(mergeSortedArrays(new int[] {
-            1, 3, 5
-        }, new int[] {
-            2, 4, 6
-        })));
+        System.out.println(
+                Arrays.toString(mergeSortedArrays(new int[] {1, 3, 5}, new int[] {2, 4, 6})));
     }
 }

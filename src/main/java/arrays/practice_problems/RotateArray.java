@@ -1,4 +1,4 @@
-package arrays.class_problems;
+package arrays.practice_problems;
 
 import java.util.*;
 
@@ -10,9 +10,8 @@ public class RotateArray {
         for (int i = 0; i < nums.length; i++) out[(i + k) % nums.length] = nums[i];
         return out;
     }
+
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(rotateArray(new int[] {
-            1, 2, 3, 4, 5, 6, 7
-        }, 3)));
+        System.out.println(Arrays.toString(rotateArray(new int[] {1, 2, 3, 4, 5, 6, 7}, 3)));
     }
 }
