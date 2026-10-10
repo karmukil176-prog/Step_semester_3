@@ -1,6 +1,5 @@
-package string.assignment_problems;
+package string.assignment;
 
-import java.util.Arrays;
 
 public class MovieReviewWordLengthProfiler {
     public static void classifyWordLengths(String review) {
@@ -14,6 +13,7 @@ public class MovieReviewWordLengthProfiler {
         }
         System.out.printf("Short: %d | Medium: %d | Long: %d%n", shortN, medium, longN);
     }
+
     public static void main(String[] args) {
         classifyWordLengths("This movie was absolutely fantastic and thrilling");
     }

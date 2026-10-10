@@ -1,4 +1,4 @@
-package string.class_problems;
+package string.practice_problems;
 
 import java.util.*;
 
@@ -12,6 +12,7 @@ public class FirstNonRepeatingCharacter {
         }
         return '\0';
     }
+
     public static void main(String[] args) {
         System.out.println(findFirstNonRepeatingChar("swiss"));
     }

@@ -1,6 +1,5 @@
-package string.assignment_problems;
+package string.assignment;
 
-import java.util.Arrays;
 
 public class TrafficSignalStreakAnalyzer {
     public static void findLongestStreak(String s) {
@@ -23,6 +22,7 @@ public class TrafficSignalStreakAnalyzer {
         }
         System.out.printf("Longest Streak: '%c' repeated %d times%n", best, bestN);
     }
+
     public static void main(String[] args) {
         findLongestStreak("RRGGGYRR");
     }

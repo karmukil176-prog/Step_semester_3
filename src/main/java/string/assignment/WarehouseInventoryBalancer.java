@@ -1,10 +1,10 @@
-package string.assignment_problems;
+package string.assignment;
 
-import java.util.Arrays;
 
 public class WarehouseInventoryBalancer {
     public static void analyzeInventory(int[] a, int[] b) {
-        if (a.length != b.length || a.length == 0) throw new IllegalArgumentException("Arrays must have equal nonzero length");
+        if (a.length != b.length || a.length == 0)
+            throw new IllegalArgumentException("Arrays must have equal nonzero length");
         long sa = 0, sb = 0;
         for (int x : a) sa += x;
         for (int x : b) sb += x;
@@ -22,13 +22,13 @@ public class WarehouseInventoryBalancer {
                 section = 'B';
             }
         }
-        System.out.printf("Section A Total: %d | Section B Total: %d | Status: %s | Highest Quantity: %d (Section %c, Item %d)%n", sa, sb, sa == sb ? "Balanced" : "Not Balanced", max, section, idx + 1);
+        System.out.printf(
+                "Section A Total: %d | Section B Total: %d | Status: %s | Highest Quantity: %d"
+                    + " (Section %c, Item %d)%n",
+                sa, sb, sa == sb ? "Balanced" : "Not Balanced", max, section, idx + 1);
     }
+
     public static void main(String[] args) {
-        analyzeInventory(new int[] {
-            20, 15, 30
-        }, new int[] {
-            25, 10, 30
-        });
+        analyzeInventory(new int[] {20, 15, 30}, new int[] {25, 10, 30});
     }
 }
