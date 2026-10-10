@@ -1,4 +1,4 @@
-package classses_and_objects.assignment;
+package access_modifiers_encapsulation_object_modeling.assignment;
 
 public class EmployeeProfileCreation {
     public static class EmployeeProfile {

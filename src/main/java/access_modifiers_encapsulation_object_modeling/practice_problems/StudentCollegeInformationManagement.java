@@ -1,4 +1,4 @@
-package classses_and_objects.practice_problems;
+package access_modifiers_encapsulation_object_modeling.practice_problems;
 
 public class StudentCollegeInformationManagement {
     public static class Student {
