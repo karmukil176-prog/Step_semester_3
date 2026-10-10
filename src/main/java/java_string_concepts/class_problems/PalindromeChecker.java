@@ -1,4 +1,4 @@
-package java_string_concepts.practice_problems;
+package java_string_concepts.class_problems;
 
 public class PalindromeChecker {
     public static boolean isPalindromeIterative(String s) {
