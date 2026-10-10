@@ -1,4 +1,4 @@
-package oop_introduction_abstraction_interface_class_vs_interface.practice_problems;
+package oop_introduction_abstraction_interface_class_vs_interface.class_problems;
 
 import java.util.*;
 

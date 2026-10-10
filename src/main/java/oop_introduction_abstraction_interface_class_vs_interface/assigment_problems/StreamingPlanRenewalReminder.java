@@ -1,4 +1,4 @@
-package oop_introduction_abstraction_interface_class_vs_interface.assignment;
+package oop_introduction_abstraction_interface_class_vs_interface.assigment_problems;
 
 import java.time.LocalDate;
 import java.util.*;
