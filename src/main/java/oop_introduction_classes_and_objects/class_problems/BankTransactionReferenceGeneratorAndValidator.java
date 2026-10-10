@@ -1,4 +1,4 @@
-package oop_introduction_classes_and_objects.practice_problems;
+package oop_introduction_classes_and_objects.class_problems;
 
 import java.util.*;
 
