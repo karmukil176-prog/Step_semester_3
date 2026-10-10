@@ -1,30 +1,36 @@
-package abstraction.assignment_problems;
+package abstraction.assignment;
 
 import java.util.Scanner;
 
 public class MovieTicketCounter {
     private abstract static class Ticket {
         private static final double CONVENIENCE_FEE = 20.0;
+
         abstract double seatPrice();
+
         final double totalPrice() {
             return seatPrice() + CONVENIENCE_FEE;
         }
     }
+
     private static final class Regular extends Ticket {
         double seatPrice() {
             return 150.0;
         }
     }
+
     private static final class Premium extends Ticket {
         double seatPrice() {
             return 250.0;
         }
     }
+
     private static final class Recliner extends Ticket {
         double seatPrice() {
             return 400.0;
         }
     }
+
     private static Ticket create(String seat) {
         return switch (seat) {
             case "REGULAR" -> new Regular();
@@ -33,6 +39,7 @@ public class MovieTicketCounter {
             default -> throw new IllegalArgumentException("Unknown seat type: " + seat);
         };
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int bookings = scanner.nextInt();
