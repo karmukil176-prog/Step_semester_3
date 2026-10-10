@@ -1,4 +1,4 @@
-package string_operations_and_perfomance.assignment_problems;
+package string_operations_and_perfomance.assignment;
 
 import java.util.*;
 
@@ -11,6 +11,7 @@ public class ProductInventoryCSVParser {
         }
         System.out.printf("Product: %s | SKU: %s | Qty: %s%n", f[0], f[1], f[2]);
     }
+
     public static void main(String[] args) {
         parseInventoryRecord("Wireless Mouse,WM-2201,150");
     }

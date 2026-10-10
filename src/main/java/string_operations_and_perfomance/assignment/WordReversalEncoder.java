@@ -1,4 +1,4 @@
-package string_operations_and_perfomance.assignment_problems;
+package string_operations_and_perfomance.assignment;
 
 import java.util.*;
 
@@ -12,6 +12,7 @@ public class WordReversalEncoder {
         }
         return out.toString();
     }
+
     public static void main(String[] args) {
         System.out.println(reverseEachWord("hello club"));
     }
